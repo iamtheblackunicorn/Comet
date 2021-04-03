@@ -3,9 +3,15 @@ import 'package:flutter/material.dart';
 class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Padding(
+    return SizedBox(
+      width: 400,
+      height: 500,
+      child: Padding(
       padding: EdgeInsets.all(25),
       child: new Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25)
+        ),
         color: Color(0xFF000000),
         child: new Column(
           children: <Widget> [
@@ -34,6 +40,6 @@ class Info extends StatelessWidget{
           ]
         )
       )
-    );
+    ));
   }
 }

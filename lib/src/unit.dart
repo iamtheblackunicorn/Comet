@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'info.dart';
 import 'home.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,11 @@ class UnitState extends State<Unit>{
         currentIndex: 0,
         selectedItemColor: Color(0xFF000000),
         onTap: (int index) {
-          changeScreen(index);
+          if (index == 2){
+            exit(0);
+          } else{
+            changeScreen(index);
+          }
         }
       ),
     );

@@ -42,7 +42,8 @@ class Home extends StatelessWidget{
             return Error();
           }
           else {
-            Map<String, dynamic> data = snapshot.data;
+            print(snapshot.data.length);
+            Map<String, List<String>> data = snapshot.data;
             List<Widget> screens = [];
             for (int i = 0; i < data.length; i++){
               String key = data.keys.elementAt(i);
