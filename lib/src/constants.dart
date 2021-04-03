@@ -42,6 +42,7 @@ int startingIndex = 0;
 double elevationParameter = 0;
 int specialIndex = 2;
 String appTitle = 'Comet';
+bool titleCenter = true;
 
 // ./pill.dart
 double specialButtonFontSize = 15;

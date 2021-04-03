@@ -35,6 +35,7 @@ class UnitState extends State<Unit>{
       appBar: new AppBar(
         backgroundColor: mainColor,
         elevation: elevationParameter,
+        centerTitle: titleCenter,
         title: new Padding(
           padding: EdgeInsets.all(basicRounding),
           child: new Text(
