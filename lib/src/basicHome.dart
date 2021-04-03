@@ -62,7 +62,7 @@ class BasicUnitState extends State<BasicUnit>{
                     new Padding(
                       padding: EdgeInsets.all(stdPadding),
                       child: new Text(
-                        '$postTime',
+                        'Posted at: $postTime',
                         textAlign: TextAlign.left,
                         style: new TextStyle(
                           color: mainColor,

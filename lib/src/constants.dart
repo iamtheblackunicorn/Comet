@@ -18,7 +18,7 @@ String apiUrl = 'https://content.guardianapis.com/search?q=finance&api-key=$apiK
 // ./basicHome.dart
 double pushDown = 70;
 double basicRounding = 25;
-double stdPadding = 20;
+double stdPadding = 15;
 double specialPadding = 10;
 double extraPadding = 30;
 double newsCardWidth = 400;

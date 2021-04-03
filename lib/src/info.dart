@@ -7,46 +7,52 @@ import 'package:flutter/material.dart';
 class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return SizedBox(
-      width: newsCardWidth,
-      height: newsCardHeight,
-      child: Padding(
-        padding: EdgeInsets.all(basicRounding),
-        child: new Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(basicRounding)
-          ),
-          color: accentColor,
-          child: new Column(
-            children: <Widget> [
-              new SizedBox(height: specialPushDown),
-              new Padding(
-                padding: EdgeInsets.all(stdPadding),
-                child:new Text(
-                  'App info',
-                  textAlign: TextAlign.left,
-                  style: new TextStyle(
-                    color: mainColor,
-                    fontSize: basicRounding
-                  )
-                )
+    return new Column(
+      children: <Widget> [
+        new SizedBox(height: pushDown),
+        new SizedBox(
+          width: newsCardWidth,
+          height: newsCardHeight,
+          child: Padding(
+            padding: EdgeInsets.all(basicRounding),
+            child: new Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(basicRounding)
               ),
-              new Padding(
-                padding: EdgeInsets.all(stdPadding),
-                child: new Text(
-                  '$infoString',
-                  textAlign: TextAlign.left,
-                  style: new TextStyle(
-                    color: mainColor,
-                    fontSize: stdPadding,
-                    fontFamily: defaultFont
+              color: accentColor,
+              child: new Column(
+                children: <Widget> [
+                  new SizedBox(height: specialPushDown),
+                  new Padding(
+                    padding: EdgeInsets.all(stdPadding),
+                    child:new Text(
+                      'App info',
+                      textAlign: TextAlign.left,
+                      style: new TextStyle(
+                        color: mainColor,
+                        fontSize: basicRounding,
+                        fontFamily: defaultFont
+                      )
+                    )
+                  ),
+                  new Padding(
+                    padding: EdgeInsets.all(stdPadding),
+                    child: new Text(
+                      '$infoString',
+                      textAlign: TextAlign.left,
+                      style: new TextStyle(
+                        color: mainColor,
+                        fontSize: stdPadding,
+                        fontFamily: defaultFont
+                      )
+                    )
                   )
-                )
+                ]
               )
-            ]
+            )
           )
         )
-      )
+      ]
     );
   }
 }

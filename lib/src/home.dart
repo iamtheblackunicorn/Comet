@@ -36,7 +36,9 @@ class HomeState extends State<Home>{
             return Error();
           }
           else {
-            List<dynamic> results = snapshot.data['results'];
+            Map<String, dynamic> data = snapshot.data;
+            Map<String, dynamic> responseData = data['response'];
+            List<dynamic> results = responseData['results'];
             List<Widget> screens = [];
             for (int i = 0; i < results.length; i++){
               Map<String, dynamic> article = results[i];
