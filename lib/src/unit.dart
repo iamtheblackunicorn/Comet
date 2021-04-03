@@ -16,7 +16,7 @@ class UnitState extends State<Unit>{
     screenList = [
       Home(),
       Info(),
-    ]
+    ];
   }
 
   @override
