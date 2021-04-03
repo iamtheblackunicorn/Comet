@@ -41,7 +41,7 @@ class HomeState extends State<Home>{
             List<Widget> screens = [];
             for (int i = 0; i < articles.length; i++) {
               Map<String, dynamic> article = articles[i];
-              print(article['title']);
+              String articleUrl = article['url'];
               String articleImage = article['urlToImage'];
               String articleTitle = shortenString(titleRange, article['title']);
               String articleDescription = article['description'];
@@ -57,7 +57,8 @@ class HomeState extends State<Home>{
                 BasicUnit(
                   heading:articleTitle,
                   content:articleDescription,
-                  image: articleImage
+                  image: articleImage,
+                  link: articleUrl
                 )
               );
             }

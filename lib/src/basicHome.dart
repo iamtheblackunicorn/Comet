@@ -5,7 +5,8 @@ class BasicUnit extends StatefulWidget{
   final String heading;
   final String content;
   final String image;
-  BasicUnit({Key key, @required this.heading, @required this.content, @required this.image}) : super(key: key);
+  final String link;
+  BasicUnit({Key key, @required this.heading, @required this.content, @required this.image, @required this.link}) : super(key: key);
   @override
   BasicUnitState createState() => BasicUnitState();
 }
@@ -13,10 +14,12 @@ class BasicUnitState extends State<BasicUnit>{
   String postHeading;
   String postContent;
   String pictureUrl;
+  String articleLink;
   void initState(){
     postHeading = widget.heading;
     postContent = widget.content;
     pictureUrl = widget.image;
+    articleLink = widget.link;
   }
   @override
   Widget build(BuildContext context){
@@ -69,31 +72,35 @@ class BasicUnitState extends State<BasicUnit>{
                     )
                   )
                 ),
-                new ElevatedButton(
-              child: Text(
-                'Read Story!'
-              ),
-              onPressed: () async {
-                try {
-                    await launch(postUrl);
-                  } catch(e) {}
-              },
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)
+                new Padding(
+                  padding: EdgeInsets.all(20),
+                  child:new ElevatedButton(
+                  child: Text(
+                    'Read Story!',
+                    style: new TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF000000),
+                    )
+                  ),
+                  onPressed: () async {
+                    try {
+                      await launch(articleLink);
+                    } catch(e) {}
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)
+                    ),
+                    primary: Color(0xFFFFFFFF),
+                    padding: EdgeInsets.all(10)
+                  ),
                 ),
-                primary: Color(0xFF000000),
-                padding: EdgeInsets.all(10),
-                textStyle: TextStyle(
-                  fontSize: 18,
-                  color: Color(0xFFFFFFFF),
                 )
-              ),
-            ),
               ]
             )
+          )
         )
-      ))
+      )
     )]);
   }
 }

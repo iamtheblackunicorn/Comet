@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:termstyle/termstyle.dart';
+String unicorn = getEmoji('unicornHead');
+String infoString = 'Comet v.1.0.0\nby The Black Unicorn $unicorn';
 class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -15,10 +17,11 @@ class Info extends StatelessWidget{
         color: Color(0xFF000000),
         child: new Column(
           children: <Widget> [
+            new SizedBox(height: 100),
             new Padding(
               padding: EdgeInsets.all(20),
               child:new Text(
-                'Lorem ipsum',
+                'App info',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
                   color: Color(0xFFFFFFFF),
@@ -29,7 +32,7 @@ class Info extends StatelessWidget{
             new Padding(
               padding: EdgeInsets.all(20),
               child: new Text(
-                'Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet.',
+                '$infoString',
                 textAlign: TextAlign.left,
                 style: new TextStyle(
                   color: Color(0xFFFFFFFF),

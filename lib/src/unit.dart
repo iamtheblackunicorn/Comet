@@ -44,7 +44,7 @@ class UnitState extends State<Unit>{
             )
           )
         ),
-        actions: <Widget>[
+        /*actions: <Widget>[
           new Padding(
             padding: EdgeInsets.only(right: 20),
             child: IconButton(
@@ -60,7 +60,7 @@ class UnitState extends State<Unit>{
               },
             ),
           ),
-        ]
+        ]*/
       ),
       backgroundColor: Color(0xFFFFFFFF),
       body: screenList.elementAt(widgetIndex),
