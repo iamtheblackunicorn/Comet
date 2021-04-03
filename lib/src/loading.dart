@@ -1,5 +1,8 @@
+// Comet by Alexander Abraham a.k.a. "The Black Unicorn"
+// Licensed under the MIT license.
+
+import 'constants.dart';
 import 'package:flutter/material.dart';
-import 'package:termstyle/termstyle.dart';
 import 'package:loading_animations/loading_animations.dart';
 
 class Loading extends StatelessWidget {
@@ -9,11 +12,11 @@ class Loading extends StatelessWidget {
       child: Column(
         children: <Widget> [
           new SizedBox(
-            height: 250
+            height: symbolPushDown
           ),
           new LoadingBouncingGrid.square(
-            size: 150,
-            backgroundColor: Color(0xFF000000),
+            size: symbolSize,
+            backgroundColor: accentColor,
           )
         ]
       )

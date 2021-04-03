@@ -1,9 +1,8 @@
+// Comet by Alexander Abraham a.k.a. "The Black Unicorn"
+// Licensed under the MIT license.
+
+import 'constants.dart';
 import 'package:dio/dio.dart';
-
-Dio dio = Dio();
-String apiKey = '809babf2a7464816b367538f4c5e1657';
-String apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=$apiKey';
-
 
 class DataHandler {
   Future<Map<String, dynamic>> get _localFile async {

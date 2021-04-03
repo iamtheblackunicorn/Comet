@@ -1,3 +1,7 @@
+// Comet by Alexander Abraham a.k.a. "The Black Unicorn"
+// Licensed under the MIT license.
+
+import 'constants.dart';
 import 'package:flutter/material.dart';
 
 class Error extends StatelessWidget {
@@ -7,20 +11,20 @@ class Error extends StatelessWidget {
       child: Column(
         children: <Widget> [
           new SizedBox(
-            height: 250
+            height: symbolPushDown
           ),
           new Icon(
             Icons.warning,
-            color: Color(0xFF000000),
-            size: 150,
+            color: accentColor,
+            size: symbolSize,
           ),
           new Text(
             'Error!',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Color(0xFF000000),
+              color: accentColor,
               fontWeight: FontWeight.bold,
-              fontSize: 25,
+              fontSize: basicRounding,
             ),
           )
         ]

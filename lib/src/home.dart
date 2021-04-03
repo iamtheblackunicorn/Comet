@@ -5,9 +5,6 @@ import 'basicHome.dart';
 import 'dataHandler.dart';
 import 'package:flutter/material.dart';
 
-String defaultDescription = 'No description provided!';
-String defaultImage = 'https://blckunicorn.art/assets/buwa/images/wallpaperFour.jpg';
-String defaultTitle = 'No title provided!';
 
 class Home extends StatefulWidget{
   final DataHandler dataClass;
@@ -23,7 +20,7 @@ class HomeState extends State<Home>{
   }
   @override
   Widget build(BuildContext context){
-    PageController pageController = PageController(initialPage:0);
+    PageController pageController = PageController(initialPage:startingIndex);
     return FutureBuilder<Map<String,dynamic>>(
       future: newsApi,
       builder: (BuildContext context, AsyncSnapshot<Map<String,dynamic>> snapshot) {
