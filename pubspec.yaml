@@ -20,4 +20,4 @@ flutter:
   fonts:
     - family: Orbi
       fonts:
-        - asset: assets/fonts/Orbi
+        - asset: assets/fonts/Orbi.ttf

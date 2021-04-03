@@ -41,7 +41,7 @@ class BasicUnitState extends State<BasicUnit>{
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(basicRounding)
               ),
-              color: new accentColor,
+              color: accentColor,
               child: new Padding(
                 padding: EdgeInsets.all(stdPadding),
                 child:
