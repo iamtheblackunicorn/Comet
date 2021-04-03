@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BasicUnit extends StatefulWidget{
   final String heading;
   final String content;
-  BasicUnit({Key key, @required this.heading, @required this.content}) : super(key: key);
+  final String image;
+  BasicUnit({Key key, @required this.heading, @required this.content, @required this.image}) : super(key: key);
   @override
   BasicUnitState createState() => BasicUnitState();
 }
 class BasicUnitState extends State<BasicUnit>{
   String postHeading;
   String postContent;
+  String pictureUrl;
   void initState(){
     postHeading = widget.heading;
     postContent = widget.content;
+    pictureUrl = widget.image;
   }
   @override
   Widget build(BuildContext context){
@@ -37,7 +41,7 @@ class BasicUnitState extends State<BasicUnit>{
                 new ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                   child: new Image.network(
-                    'https://github.com/iamtheblackunicorn/iamtheblackunicorn.github.io/raw/main/assets/buwa/images/wallpaperThirtySeven.jpg',
+                    '$pictureUrl',
                     width: double.infinity,
                     height: 200,
                     fit: BoxFit.cover
@@ -64,7 +68,28 @@ class BasicUnitState extends State<BasicUnit>{
                       fontSize: 20
                     )
                   )
+                ),
+                new ElevatedButton(
+              child: Text(
+                'Read Story!'
+              ),
+              onPressed: () async {
+                try {
+                    await launch(postUrl);
+                  } catch(e) {}
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)
+                ),
+                primary: Color(0xFF000000),
+                padding: EdgeInsets.all(10),
+                textStyle: TextStyle(
+                  fontSize: 18,
+                  color: Color(0xFFFFFFFF),
                 )
+              ),
+            ),
               ]
             )
         )

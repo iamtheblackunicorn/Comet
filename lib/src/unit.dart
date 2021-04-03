@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'info.dart';
 import 'home.dart';
+import 'dataHandler.dart';
 import 'package:flutter/material.dart';
 
 class Unit extends StatefulWidget{
@@ -15,7 +16,7 @@ class UnitState extends State<Unit>{
   void initState(){
     widgetIndex = 0;
     screenList = [
-      Home(),
+      Home(dataClass: DataHandler()),
       Info(),
     ];
   }
@@ -36,13 +37,31 @@ class UnitState extends State<Unit>{
         title: new Padding(
           padding: EdgeInsets.all(25),
           child: new Text(
-          'HOME',
-          style: new TextStyle(
-            color: Color(0xFF000000),
-            fontSize: 30
+            'HOME',
+            style: new TextStyle(
+              color: Color(0xFF000000),
+              fontSize: 30
+            )
           )
-        )
-      )),
+        ),
+        actions: <Widget>[
+          new Padding(
+            padding: EdgeInsets.only(right: 20),
+            child: IconButton(
+              icon: Icon(
+                Icons.sync_sharp,
+                color: Color(0xFF000000),
+                size: 24.0,
+              ),
+              onPressed: () {
+                setState((){
+                  // do something
+                });
+              },
+            ),
+          ),
+        ]
+      ),
       backgroundColor: Color(0xFFFFFFFF),
       body: screenList.elementAt(widgetIndex),
       bottomNavigationBar: BottomNavigationBar(
