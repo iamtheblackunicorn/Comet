@@ -7,6 +7,8 @@ import 'home.dart';
 import 'constants.dart';
 import 'dataHandler.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Unit extends StatefulWidget{
   @override
@@ -31,6 +33,9 @@ class UnitState extends State<Unit>{
   }
   @override
   Widget build(BuildContext context){
+    String homeMessage = AppLocalizations.of(context).homeLabel;
+    String infoMessage = AppLocalizations.of(context).infoLabel;
+    String exitMessage = AppLocalizations.of(context).exitLabel;
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: mainColor,
@@ -58,7 +63,7 @@ class UnitState extends State<Unit>{
               color: accentColor,
               size: stdIconSize,
             ),
-            label: 'Home',
+            label: '$homeMessage',
             backgroundColor: accentColor,
           ),
           BottomNavigationBarItem(
@@ -67,7 +72,7 @@ class UnitState extends State<Unit>{
               color: accentColor,
               size: stdIconSize,
             ),
-            label: 'Info',
+            label: '$infoMessage',
             backgroundColor: accentColor,
           ),
           BottomNavigationBarItem(
@@ -76,7 +81,7 @@ class UnitState extends State<Unit>{
               color: accentColor,
               size: stdIconSize,
             ),
-            label: 'Exit',
+            label: '$exitMessage',
             backgroundColor: accentColor,
           ),
         ],

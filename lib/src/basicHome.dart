@@ -4,6 +4,8 @@
 import 'constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class BasicUnit extends StatefulWidget{
   final String heading;
@@ -29,6 +31,8 @@ class BasicUnitState extends State<BasicUnit>{
   }
   @override
   Widget build(BuildContext context){
+    String readMessage = AppLocalizations.of(context).readLabel;
+    String postedOnMessage = AppLocalizations.of(context).postedOnLabel;
     return new Column(
       children:<Widget> [
         SizedBox(height: pushDown),
@@ -62,7 +66,7 @@ class BasicUnitState extends State<BasicUnit>{
                     new Padding(
                       padding: EdgeInsets.all(stdPadding),
                       child: new Text(
-                        'Posted at: $postTime',
+                        '$postedOnMessage: $postTime',
                         textAlign: TextAlign.left,
                         style: new TextStyle(
                           color: mainColor,
@@ -75,7 +79,7 @@ class BasicUnitState extends State<BasicUnit>{
                       padding: EdgeInsets.all(stdPadding),
                       child:new ElevatedButton(
                         child: Text(
-                          'Read Story!',
+                          '$readMessage',
                           style: new TextStyle(
                             fontSize: buttonFontSize,
                             color: accentColor,

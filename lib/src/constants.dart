@@ -9,6 +9,8 @@ import 'package:termstyle/termstyle.dart';
 Color mainColor = Color(0xFFFFFFFF);
 Color accentColor = Color(0xFF000000);
 String defaultFont = 'Orbi';
+String appTitle = 'Comet';
+String appVersion = '1.0.0';
 
 // ./dataHandler.dart
 Dio dio = Dio();
@@ -33,7 +35,6 @@ double symbolSize = 150;
 // ./info.dart
 double specialPushDown = 100;
 String unicorn = getEmoji('unicornHead');
-String infoString = 'Comet v.1.0.0\nby The Black Unicorn $unicorn';
 
 // ./unit.dart
 double stdIconSize = 24;
@@ -41,7 +42,6 @@ double titleFontSize = 30;
 int startingIndex = 0;
 double elevationParameter = 0;
 int specialIndex = 2;
-String appTitle = 'Comet';
 bool titleCenter = true;
 
 // ./pill.dart

@@ -3,10 +3,15 @@
 
 import 'constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Info extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    String appInfoMessage = AppLocalizations.of(context).appInfoLabel;
+    String byMessage = AppLocalizations.of(context).byLabel;
+    String infoString = '$appTitle v.$appVersion\n$byMessage The Black Unicorn $unicorn';
     return new Column(
       children: <Widget> [
         new SizedBox(height: pushDown),
@@ -26,7 +31,7 @@ class Info extends StatelessWidget{
                   new Padding(
                     padding: EdgeInsets.all(stdPadding),
                     child:new Text(
-                      'App info',
+                      '$appInfoMessage',
                       textAlign: TextAlign.left,
                       style: new TextStyle(
                         color: mainColor,
