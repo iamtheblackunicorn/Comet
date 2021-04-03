@@ -14,7 +14,7 @@ This app is a curious little app! I am tired of checking several news websites e
 
 - *Dark Planet* (v.1.0.0): [Download](https://github.com/iamtheblackunicorn/Comet/releases/download/v.1.0.0/Comet-v1.0.0-DarkPlanet-Release.apk) (16.7 MB)
 
-- *Dark Debris* (v.1.1.0): [Download](https://github.com/iamtheblackunicorn/Comet/releases/download/v.1.1.0/Comet-v1.1.0-DarkDebris-Release.apk) (16.7 MB)
+- *Dark Debris* (v.1.1.0): [Download](https://github.com/iamtheblackunicorn/Comet/releases/download/v.1.1.0/Comet-v1.1.0-DarkDebris-Release.apk) (17.0 MB)
 
 
 ## Building :hammer:
