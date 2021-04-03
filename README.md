@@ -1,4 +1,10 @@
+<p align="center">
+ <img src="https://github.com/iamtheblackunicorn/Comet/raw/main/assets/images/banner.png"/>
+</p>
+
 # COMET :ringed_planet:
+
+*A small news-reading app.* :ringed_planet:
 
 ## About :books:
 
@@ -7,6 +13,8 @@ This app is a curious little app! I am tired of checking several news websites e
 ## Download :inbox_tray:
 
 - *Dark Planet* (v.1.0.0): [Download](https://github.com/iamtheblackunicorn/Comet/releases/download/v.1.0.0/Comet-v1.0.0-DarkPlanet-Release.apk) (16.7 MB)
+
+- *Dark Debris* (v.1.1.0): [Download](https://github.com/iamtheblackunicorn/Comet/releases/download/v.1.1.0/Comet-v1.1.0-DarkDebris-Release.apk) (16.7 MB)
 
 
 ## Building :hammer:
@@ -39,12 +47,32 @@ $ flutter build apk
 
 You have now generated a release build of *Comet*.
 
+## Extending the supported languages :book:
+
+*Comet* is localized for German and English. To add a language, simply create a filed called `app_languagecode.arb` in `lib/l10n` where `languagecode` represents the languagecode for the language you want to add. If it were Spanish for example, you would create a file called `app_es.arb`.
+Copy and paste the contents from one of the other `*.arb` files and edit the strings accordingly.
+Finally, add this line in the list `supportedLocales` in the file `lib/main.dart`.
+
+```dart
+const Locale('languagecode', ''),
+```
+
+`languagecode` represents the language you are translating for.
+
 ## Changelog :black_nib:
 
 ### Version 1.0.0: Dark Planet
 
 - initial release
 - bare-bones
+
+### Version 1.1.0: Dark Debris
+
+- improved performance
+- massive visual changes
+- tron-like font
+- localized for German and English
+- minor fixes
 
 ## Note :scroll:
 

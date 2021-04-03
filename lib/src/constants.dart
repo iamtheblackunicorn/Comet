@@ -10,7 +10,7 @@ Color mainColor = Color(0xFFFFFFFF);
 Color accentColor = Color(0xFF000000);
 String defaultFont = 'Orbi';
 String appTitle = 'Comet';
-String appVersion = '1.0.0';
+String appVersion = '1.1.0';
 
 // ./dataHandler.dart
 Dio dio = Dio();
