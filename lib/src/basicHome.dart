@@ -105,7 +105,43 @@ class BasicUnitState extends State<BasicUnit>{
               )
             )
           )
-        )
+        ),
+        /*new Expanded(
+          child: new Row(
+            children: <Widget> [
+              new ListView.builder(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                itemCount: categoryList.length,
+                itemBuilder: (context, index) {
+                  String category = categoryList[index];
+                  return Padding(
+                    padding: EdgeInsets.all(stdPadding),
+                    child:new ElevatedButton(
+                      child: Text(
+                        '$category',
+                        style: new TextStyle(
+                          fontSize: specialButtonFontSize,
+                          color: mainColor,
+                          fontFamily: defaultFont
+                        )
+                      ),
+                      onPressed: () {
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(basicRounding)
+                        ),
+                        primary: accentColor,
+                        padding: EdgeInsets.all(stdPadding)
+                      ),
+                    ),
+                  );
+                }
+              )
+            ]
+          )
+        )*/
       ]
     );
   }

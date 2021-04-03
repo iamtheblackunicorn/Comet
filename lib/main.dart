@@ -20,7 +20,8 @@ void main() {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: [
-        Locale('en', '')
+        Locale('en', ''),
+        Locale('de', '')
     ],
     )
   );
