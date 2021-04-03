@@ -8,6 +8,44 @@ This app is a curious little app! I am tired of checking several news websites e
 
 - *Dark Planet* (v.1.0.0): Still work in progress.
 
+
+## Building :hammer:
+
+Make sure that you have the following programs installed:
+
+- Flutter SDK
+- Dart SDK
+- Android Studio
+- Android SDK
+- Java JDK
+- Xcode
+- Make
+- Git
+
+After you have installed these, run this command to generate a keystore for the app.
+
+```bash
+keytool -genkey -v -keystore key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+After having done that, move the keystore to `android/app` and fill in the fields for the keystore password in the file `android/app/key.properties`.
+
+Finally, run these commands:
+
+```bash
+$ flutter pub get
+$ flutter build apk
+```
+
+You have now generated a release build of *Comet*.
+
+## Changelog :black_nib:
+
+### Version 1.0.0: Dark Planet
+
+- initial release
+- bare-bones
+
 ## Note :scroll:
 
 - *Comet* :ringed_planet: by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn"* :unicorn:
