@@ -15,7 +15,7 @@ String appVersion = '1.1.0';
 // ./dataHandler.dart
 Dio dio = Dio();
 String apiKey = '6619159b-07e4-4d0c-9a0f-988e194aa2be';
-String apiUrl = 'https://content.guardianapis.com/search?q=finance&api-key=$apiKey';
+String apiUrl = 'https://content.guardianapis.com/search?q=international&api-key=$apiKey';
 
 // ./basicHome.dart
 double pushDown = 70;
