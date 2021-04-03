@@ -5,6 +5,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:termstyle/termstyle.dart';
 
+// ./everywhere
+Color mainColor = Color(0xFFFFFFFF);
+Color accentColor = Color(0xFF000000);
+String defaultFont = 'Orbi';
+
 // ./dataHandler.dart
 Dio dio = Dio();
 String apiKey = '6619159b-07e4-4d0c-9a0f-988e194aa2be';
@@ -21,10 +26,6 @@ double newsCardHeight = 500;
 double imageWidth = 200;
 double buttonFontSize = 18;
 
-// ./everywhere
-Color mainColor = Color(0xFFFFFFFF);
-Color accentColor = Color(0xFF000000);
-
 // ./error.dart & loading.dart
 double symbolPushDown = 250;
 double symbolSize = 150;
@@ -40,3 +41,7 @@ double titleFontSize = 30;
 int startingIndex = 0;
 double elevationParameter = 0;
 int specialIndex = 2;
+String appTitle = 'Comet';
+
+// ./pill.dart
+double specialButtonFontSize = 15;

@@ -38,10 +38,11 @@ class UnitState extends State<Unit>{
         title: new Padding(
           padding: EdgeInsets.all(basicRounding),
           child: new Text(
-            'HOME',
+            appTitle,
             style: new TextStyle(
               color: accentColor,
-              fontSize: titleFontSize
+              fontSize: titleFontSize,
+              fontFamily: defaultFont
             )
           )
         ),

@@ -17,7 +17,7 @@ dev_dependencies:
     sdk: flutter
 flutter:
   uses-material-design: true
-  #fonts:
-  #  - family: Ostrich
-  #    fonts:
-  #      - asset: assets/fonts/Ostrich.ttf
+  fonts:
+    - family: Orbi
+      fonts:
+        - asset: assets/fonts/Orbi

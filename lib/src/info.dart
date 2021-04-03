@@ -38,7 +38,8 @@ class Info extends StatelessWidget{
                   textAlign: TextAlign.left,
                   style: new TextStyle(
                     color: mainColor,
-                    fontSize: stdPadding
+                    fontSize: stdPadding,
+                    fontFamily: defaultFont
                   )
                 )
               )

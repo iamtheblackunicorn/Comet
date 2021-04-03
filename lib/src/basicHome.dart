@@ -1,20 +1,18 @@
 // Comet by Alexander Abraham a.k.a. "The Black Unicorn"
 // Licensed under the MIT license.
 
-import 'constants.dart'
+import 'constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BasicUnit extends StatefulWidget{
   final String heading;
-  final String content;
-  final String image;
+  final String time;
   final String link;
   BasicUnit({
     Key key,
     @required this.heading,
-    @required this.content,
-    @required this.image,
+    @required this.time,
     @required this.link
   }) : super(key: key);
   @override
@@ -22,13 +20,11 @@ class BasicUnit extends StatefulWidget{
 }
 class BasicUnitState extends State<BasicUnit>{
   String postHeading;
-  String postContent;
-  String pictureUrl;
+  String postTime;
   String articleLink;
   void initState(){
     postHeading = widget.heading;
-    postContent = widget.content;
-    pictureUrl = widget.image;
+    postTime = widget.time;
     articleLink = widget.link;
   }
   @override
@@ -51,15 +47,6 @@ class BasicUnitState extends State<BasicUnit>{
                 child:
                   new Column(
                     children: <Widget> [
-                    new ClipRRect(
-                      borderRadius: BorderRadius.circular(basicRounding),
-                      child: new Image.network(
-                        '$pictureUrl',
-                        width: double.infinity,
-                        height: imageWidth,
-                        fit: BoxFit.cover
-                      )
-                    ),
                     new Padding(
                       padding: EdgeInsets.all(stdPadding),
                       child:new Text(
@@ -67,18 +54,20 @@ class BasicUnitState extends State<BasicUnit>{
                         textAlign: TextAlign.left,
                         style: new TextStyle(
                           color: mainColor,
-                          fontSize: basicRounding
+                          fontSize: basicRounding,
+                          fontFamily: defaultFont
                         )
                       )
                     ),
                     new Padding(
                       padding: EdgeInsets.all(stdPadding),
                       child: new Text(
-                        '$postContent',
+                        '$postTime',
                         textAlign: TextAlign.left,
                         style: new TextStyle(
                           color: mainColor,
-                          fontSize: stdPadding
+                          fontSize: stdPadding,
+                          fontFamily: defaultFont
                         )
                       )
                     ),
@@ -90,6 +79,7 @@ class BasicUnitState extends State<BasicUnit>{
                           style: new TextStyle(
                             fontSize: buttonFontSize,
                             color: accentColor,
+                            fontFamily: defaultFont
                           )
                         ),
                         onPressed: () async {

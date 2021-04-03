@@ -25,6 +25,7 @@ class Error extends StatelessWidget {
               color: accentColor,
               fontWeight: FontWeight.bold,
               fontSize: basicRounding,
+              fontFamily: defaultFont
             ),
           )
         ]

@@ -1,7 +1,11 @@
+// Comet by Alexander Abraham a.k.a. "The Black Unicorn"
+// Licensed under the MIT license.
+
 import 'aux.dart';
 import 'error.dart';
 import 'loading.dart';
 import 'basicHome.dart';
+import 'constants.dart';
 import 'dataHandler.dart';
 import 'package:flutter/material.dart';
 
@@ -32,29 +36,17 @@ class HomeState extends State<Home>{
             return Error();
           }
           else {
-            List<dynamic> articles = snapshot.data['articles'];
-            int descriptionRange = 40;
-            int titleRange = 20;
+            List<dynamic> results = snapshot.data['results'];
             List<Widget> screens = [];
-            for (int i = 0; i < articles.length; i++) {
-              Map<String, dynamic> article = articles[i];
-              String articleUrl = article['url'];
-              String articleImage = article['urlToImage'];
-              String articleTitle = shortenString(titleRange, article['title']);
-              String articleDescription = article['description'];
-              if (articleImage == null ){
-                articleImage = defaultImage;
-              }
-              if (articleDescription == null) {
-                articleDescription = defaultDescription;
-              } else {
-                articleDescription = shortenString(descriptionRange, article['description']);
-              }
+            for (int i = 0; i < results.length; i++){
+              Map<String, dynamic> article = results[i];
+              String articleTitle = article['webTitle'];
+              String articleUrl = article['webUrl'];
+              String articleDate = article['webPublicationDate'];
               screens.add(
                 BasicUnit(
-                  heading:articleTitle,
-                  content:articleDescription,
-                  image: articleImage,
+                  heading: articleTitle,
+                  time: articleDate,
                   link: articleUrl
                 )
               );
